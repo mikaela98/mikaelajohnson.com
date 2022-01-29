@@ -1,0 +1,451 @@
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Merriweather:ital@1&display=swap');
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/* Styling Variables */
+:root {
+  --link-color: #8CA16A;
+  --overlay-color: #DBD1C0;
+  --body-typeface: 'Nunito', sans-serif;
+  --main-heading: 'Nunito', sans-serif;
+  --background-color: #FDFBF7;
+  --header-background-color: #1C322F;
+  --body-text: #1C322F;
+  --project-headings: #1C322F;
+  --hover-color: #CCAE3D;
+}
+
+
+body {
+  font-family: var(--body-typeface);
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+
+
+/* Making all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+
+}
+
+
+
+/* Mobile and Global Typography */
+
+h1 {
+  font-size: 2.175em;
+  font-family: var(--main-heading);
+  line-height: 1.2em;
+  margin-bottom: .5em;
+}
+
+.project-title {
+  text-transform: uppercase;
+}
+
+.project-title-overlay {
+  font-size: 1.875em;
+}
+
+.categories {
+  text-transform: uppercase;
+}
+
+.hero-headline {
+  color: var(--project-headings);
+  background-color: var(--header-background-color)
+}
+
+/* Hyperlink Styles */
+a {
+  text-decoration: none;
+  color: var(--project-headings)
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+
+
+
+/* Work Page Layout */
+
+
+.work-wrapper {
+  flex: 1;
+  width: 100%;
+  /* Take up the remaining space available */
+}
+
+.portfolio {
+  /* padding: 1rem; */
+}
+
+/* Defining the work page grid for mobile and global */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-gap: 1rem; */
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width. Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+.project {
+  position: relative;
+  /* Required to contain overlay size */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.66s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+/* Solid Colour Overlay */
+.solid {
+  background-color: var(--overlay-color);
+}
+
+.project:hover .solid,
+.project:active .solid {
+  opacity: 0.98;
+  color: #FDFBF7;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2em 3em 2em 3em;
+  text-align: center;
+}
+
+.footer-item-2 {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.social-item {
+  padding: 0 1rem;
+}
+
+/*Illustration Gallery*/
+
+.gallery{
+  margin: 10px 50px;
+  justify-content: center;
+}
+
+.gallery img{
+  transition: 1s;
+  padding: 15px;
+  width: 515px;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero */
+
+.branding-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 2em 0em 2em;
+  align-items: center;
+
+}
+
+.navigation-item {
+  /* width: 7em; */
+}
+
+.navigation-link {
+  font-size: .6rem;
+  padding-bottom: 1rem;
+  width: 6rem;
+  display: block;
+  text-align: center;
+}
+
+.navigation-link:hover {
+  background: url(mikaela-johnson-highlight-squiggle.svg);
+  /* z-index: 50; */
+  background-repeat: repeat-x;
+  background-position-y: 2rem;
+  /* background-size: 86px 5px; */
+}
+
+.branding-sub-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 1em 3em 0em 3em; */
+  align-items: center;
+  text-transform: uppercase;
+}
+
+
+
+.logo {
+  width: 3.5em;
+}
+
+.hero-headline-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em 2em;
+  flex-direction: column;
+}
+
+.hero-headline {
+  font-size: 56px;
+  padding: 0em 7em 0em 7em;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0em 3em 1em 3em;
+}
+
+/* Hero */
+
+.hero {
+  /* min-height: 100vh;
+  display: flex;
+  flex-direction: column; */
+  width: 100%;
+}
+
+.hero-about {
+  flex: 1;
+}
+
+.about-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em 2em;
+  flex-direction: column;
+}
+
+.about-photo {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.about-bio {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+}
+
+
+
+
+.hero-logo {
+  width: 80vw;
+}
+
+.hero-arrow {
+  width: 2em;
+  margin-top: 0vh;
+}
+
+
+
+
+/* Project Page */
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.project-aside {
+  width: 100%;
+  color: var(--body-text);
+  padding: 1em;
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+  padding-right: 1em;
+}
+
+.project-details {
+  width: 100%;
+  padding: 1em;
+}
+
+
+
+
+
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body {
+
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body {
+
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .navigation-item {
+    /* width: 12em; */
+
+
+  }
+
+  .sub-navigation-item {}
+
+  .navigation-link {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .hero-headline-wrapper {
+    padding: 4em 8em;
+
+  }
+
+  .branding-navigation {
+    padding: 1em 3em 0em 3em;
+  }
+
+  .main-footer {
+    flex-direction: row;
+    text-transform: uppercase;
+  }
+
+  .footer-item-2 {
+    flex-direction: row;
+  }
+
+  .hero-logo {
+    width: 60vw;
+  }
+
+  .hero-arrow {
+    width: 3em;
+    margin-top: -12vh;
+  }
+
+
+
+  /* Only change the pixels below for large screens as desired */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+
+  .project-wrapper {
+    flex-direction: row;
+  }
+
+  .project-aside {
+    width: 28vw;
+    height: 40vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh;
+
+
+  }
+
+  .project-details {
+    width: 68vw;
+
+  }
+
+
+  .about-wrapper {
+    flex-direction: row;
+    padding: 4em 12em;
+  }
+
+  .about-photo {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .about-bio {
+    width: 70%;
+    padding: 3rem;
+  }
+
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  body {
+
+  }
+}
