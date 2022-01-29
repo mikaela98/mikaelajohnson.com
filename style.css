@@ -894,19 +894,6 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* .project-wrapper {
-  flex-direction: row;
-}
-
-.project-aside {
-  width: 28vw;
-  height: 40vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5vh;
-
-
-}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -1075,16 +1062,6 @@ p {
     width: 48vw;
     padding-right: 3em;
   }
-
-  /* .project-aside {
-    width: 28vw;
-    height: 40vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0vh;
-    padding: 0em 1em 1em 1em;
-  } */
-
 
   .project-details {
     padding: 0em 70px 0em 70px;
