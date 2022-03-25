@@ -1,5 +1,5 @@
 /* Typography imported from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
 
 html {
   box-sizing: border-box;
@@ -18,11 +18,11 @@ html {
   --link-color: #B98348;
   --overlay-color: #B98348;
   --type-on-path-color: #B98348;
-  --body-typeface: 'Work Sans', sans-serif;
-  --main-heading: 'Signika Negative', sans-serif;
+  --body-typeface: 'Lato', sans-serif;
+  --main-heading: 'Neuton', serif;
   --background-color: #F5EFE7;
-  --body-text: #312F0C;
-  --project-headings: #312F0C;
+  --body-text: #3D3C2B;
+  --project-headings: #3D3C2B;
   --hover-color: #B98348;
   --footer-color: #B98348;
   --footer-text: #D6DCD5;
@@ -56,14 +56,26 @@ h1 {
   font-size: 1.25em;
   line-height: 1.3em;
   font-family: var(--main-heading);
+  font-weight: 900;
+  color: var(--overlay-color);
 }
 
 h2 {
-  font-family: var(--main-heading)
+  font-family: var(--main-heading);
+  font-weight: 900;
+  font-size: 35px;
 }
 
 h3 {
   font-size: 0.8em;
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 1.3em;
+  font-family: var(--main-heading);
+  font-weight: 900;
+  color: var(--project-headings)
 }
 
 /* .hero-headline {
@@ -85,17 +97,35 @@ h3 {
 /* Hyperlink Styles */
   a {
   text-decoration: none;
-  color: var(--project-headings);
+  color: var(--link-color);
 }
 
 a:hover {
-  color: var(--hover-color);
+  color: var(--link-color);
+} 
+
+a.previous-project-title {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a.previous-project-title:hover {
+  color: var(--proj);
+} 
+
+a.next-project-title {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a.next-project-title:hover {
+  color: var(--proj);
 } 
 
 a.footerlink {
   text-decoration: none;
   color: var(--footer-text);
-  font-size: 22px;
+  font-size: 16.5px;
 }
 
 a.footerlink:hover {
@@ -104,7 +134,8 @@ a.footerlink:hover {
 
 a.footertop {
   text-decoration: none;
-  color: var(--project-headings);
+  color: var(--footer-text);
+  font-size: 13px;
 }
 
 a.footertop:hover {
@@ -118,7 +149,24 @@ p {
   color: var(--body-text);
 }
 
+p2 {
+  font-family: var(--main-heading);
+  font-size: 18px;
+  line-height: 0.1em;
+}
 
+p3 {
+  line-height: 1.5;
+  color: var(--link-color);
+  font-family: var(--main-heading);
+  font-size: 18px;
+}
+
+p4 {
+  line-height: 1.6;
+  color: var(--link-color);
+  font-size: 13px;
+}
 
 
 
@@ -137,7 +185,7 @@ p {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  grid-gap: 10px;
+  grid-gap:3px;
   padding: 15px;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width. Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
@@ -383,8 +431,10 @@ p {
   width: 4.5rem;
   display: block;
   text-align: left;
-  font-size: 18px;
-  /*text-transform: uppercase;*/
+  font-size: 13px;
+  color: var(--link-color);
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
 }
 
 .branding-sub-navigation {
@@ -399,7 +449,7 @@ p {
 
 .logo {
   margin-top: 1em;
-  width: 2.6em;
+  width: 2em;
   position: absolute;
   top: 0;
   left: 2em;
@@ -407,15 +457,18 @@ p {
 }
 
 .home-wrapper{
-  padding-left: 1em;
-  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.2em;
 }
 
 .headline-description {
+  text-align: center;
   padding-top: 4.5em;
-  padding-bottom: 1em;
-  width: 90vw;
-  line-height: 1.2em;
+  padding-bottom: 1.2em;
+  width: 96vw;
+  line-height: 1.1em;
   font-size: 30px;
 }
 
@@ -429,9 +482,9 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
+  justify-content: center;
   width: 100%;
-  align-content: flex-start;
+  font-size: 15px;
 }
 
 .button {
@@ -441,8 +494,8 @@ p {
   border-style: solid;
   border-width: 0.5px;
   color: #B98348;
-  padding: 10px 18px;
-  margin: 0em .8em .8em 0em;
+  padding: 8px 15px;
+  margin: 0em .5em .5em 0em;
   text-align: center;
   text-decoration: none;
   border-radius: 30px;
@@ -455,13 +508,22 @@ p {
   cursor: pointer;
 }
 
-.project-title-wrapper{
-  display: none;
+ .project-title-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  padding-bottom: 2em;
+}
+
+.project-title{
+  color: var(--link-color);
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
 }
 
 .categories{
-  text-transform: uppercase;
-  letter-spacing: 0.02rem;
+display: none;
 }
 
 /* About */
@@ -494,13 +556,12 @@ p {
 .about-bio {
   width: 100%;
   text-align: left;
-  font-size: 30px;
-  line-height: normal;
+  line-height: 2.5em;
+  color: var(--link-color);
 }
 
 .emoji {
-  padding-right: 0.2em;
-  padding-top: 1em;
+display: none;
 }
 
 .about-bio-grid-wrapper{
@@ -518,21 +579,26 @@ p {
 }
 
 .about-bio-grid-1{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding-right: 1em;
-  font-size: 18px;
+  padding-bottom: 2em;
 }
 
 .about-bio-grid-2{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding-right: 1em;
-  font-size: 18px;
+  padding-bottom: 2em;
 }
 
 .about-bio-grid-3{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding-right: 1em;
-  font-size: 18px;
   padding-bottom: 2em;
 }
 
@@ -543,14 +609,15 @@ p {
 .project-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 3em 1em 2em 1em;
+  padding: 4em 1em 1em 1em;
 }
 
 .project-type{
-  font-size: 18px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 /* EGG */
@@ -854,7 +921,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   font-size: 18px;
-  padding: 1em 1em 3em 1em;
+  padding: 0em 1em 1.75em 1em;
 }
 
 .next-project{
@@ -899,42 +966,78 @@ p {
 @media (min-width: 992px) {
   body {}
 
+  h2 {
+    font-size: 70px;
+  }
+
+  h4 {
+    font-size: 75px;
+  }
+
+  p2 {
+    font-family: var(--main-heading);
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+
+  p3 {
+    line-height: 1.5;
+    color: var(--link-color);
+    font-family: var(--main-heading);
+    font-size: 24px;
+  }
+  
+  p4 {
+    line-height: 1.6;
+    color: var(--link-color);
+    font-size: 16px;
+  }
+
+  a.footerlink {
+    font-size: 22px;
+  }
+  
+  a.footertop {
+    font-size: 18px;
+  }
+
 
   .navigation-link {
     padding-top: 0em;
     width: 7.5rem;
-    font-size: 22px;
+    font-size: 18px;
+    letter-spacing: 0.05rem;
     text-align: center;
+    text-transform: uppercase;
   }
 
   .navigation-link:hover {
     background: url(squiggle-highlight.svg);
     z-index: 50;
     background-repeat: repeat-x;
-    background-position-y: 2.2rem;
+    background-position-y: 1.76rem;
     background-size: 0px 86px 5px 20px;
   }
 
   .headline-description {
-    padding-top: 6em;
-    padding-bottom: 1em;
-    width: 70vw;
+    padding-top: 2.2em;
+    padding-bottom: 1.2em;
+    width: 65vw;
     line-height: 1.2em;
-    font-size: 40px;
+    font-size: 65px;
   }
 
 .home-wrapper{
-  padding-left: 4.5em;
-  padding-bottom: 3em;
+  padding-bottom: 4.5em;
 }
 
 .home-project-navigation{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  width: 70%;
-  align-content: flex-start;
+  justify-content: center;
+  width: 60%;
+  font-size: 18px;
 }
 
 .button {
@@ -970,11 +1073,11 @@ p {
   }
 
   .logo {
-    width: 3.5em;
+    width: 2.5em;
     float: none;
     position: absolute;
     top: 4.2%;
-    left: 50%;
+    left: 5%;
     transform: translate(-50%, -50%);
   }
 
@@ -984,11 +1087,19 @@ p {
     justify-content: space-between;
     padding-bottom: 4.5em;
     font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+
+  .project-title{
+    color: var(--link-color);
   }
 
   .categories{
+    display: flex;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
+    color: var(--link-color);
   }
 
   .main-footer {
@@ -1058,7 +1169,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 18px;
     width: 48vw;
     padding-right: 3em;
   }
@@ -1091,7 +1201,7 @@ p {
   }
 
   .next-project-arrow {
-    width: 4vw;
+    width: 3vw;
   }
 
   .about-introduction {
@@ -1112,13 +1222,15 @@ p {
   .about-bio {
     width: 50%;
     padding: 3rem;
-    font-size: 50px;
-    line-height: 1.2em;
+    font-size: 20px;
+    line-height: 3.2em;
+    color: var(--link-color);
   }
 
   .emoji {
-    padding-right: 0.2em;
-    padding-top: 0;
+    display: flex;
+    padding-right: 0.4em;
+    padding-top: 0em;
   }
 
   .about-bio-grid-wrapper{
