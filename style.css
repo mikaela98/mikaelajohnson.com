@@ -31,7 +31,6 @@ html {
 
 body {
   font-family: var(--body-typeface);
-  line-height: 2;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -72,7 +71,7 @@ h3 {
 
 h4 {
   font-size: 45px;
-  line-height: 1.3em;
+  line-height: 1em;
   font-family: var(--main-heading);
   font-weight: 900;
   color: var(--project-headings)
@@ -145,14 +144,14 @@ a.footertop:hover {
 
 
 p {
-  line-height: 1.6;
+  line-height: 2.5;
   color: var(--body-text);
 }
 
 p2 {
   font-family: var(--main-heading);
   font-size: 18px;
-  line-height: normal;
+  line-height: 1.5em;
 }
 
 p3 {
@@ -185,7 +184,7 @@ p4 {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  grid-gap:3px;
+  grid-gap: 3px;
   /*padding: 15px;*/
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width. Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
@@ -313,8 +312,9 @@ p4 {
 
 /* Tooltip container */
 .emailaddress{  
-  margin-top: -1.6em;
+  margin-top: -0.2em;
   position: relative;
+  line-height: 2;
 }
 
 /* Tooltip text */
@@ -367,6 +367,7 @@ p4 {
 .social-item {
   padding: 0 1rem;
   color: var(--footer-text);
+  line-height: 2;
 }
 
 .footer-item-3 {
@@ -517,7 +518,7 @@ display: none;
   flex-direction: column;
   align-items: center;
   font-size: 12px;
-  padding-bottom: 2em;
+  padding-bottom: 1.75em;
 }
 
 .project-title{
@@ -618,7 +619,7 @@ display: none;
 display: flex;
 text-transform: uppercase;
 font-size: 15px;
-padding-bottom: 1em;
+padding-bottom: 0.5em;
 }
 
 /* EGG */
@@ -911,8 +912,10 @@ padding-bottom: 1em;
 .details-description{
   display: flex;
   align-items: center;
-  padding: 1em 0em 1em 0em;
+  padding: 0.5em 0em 1em 0em;
   font-size: 18px;
+  line-height: 1.5em;
+  font-family: var(--main-heading);
 }
 
 .next-project-wrapper {
@@ -1222,7 +1225,7 @@ padding-bottom: 1em;
     padding: 0em 10em 2.5em 0em;
   }
 
-  .about-wrapper {
+  .about-wrapper { 
     flex-direction: row;
     padding: 4em 0em 0em 0em;
   }
