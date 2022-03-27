@@ -388,7 +388,7 @@ p4 {
 }
 
 .footertop {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 /*Illustration Gallery*/
@@ -1125,12 +1125,11 @@ padding-bottom: 0.5em;
   }
 
   .emailaddress{  
-    margin-top: -1.7em;
     position: relative;
+    line-height: 2;
   }
 
   .footer-item-1{
-    margin-top: -0.45em;
     font-size: 70px;
   }
 
