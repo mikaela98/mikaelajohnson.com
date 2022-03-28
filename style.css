@@ -427,6 +427,17 @@ p4 {
   justify-content: right;
 }
 
+.navigation-link-black {
+  padding: 2em 0em 0em 0em;
+  width: 4.5rem;
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  color: var(--body-text);
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+
 .navigation-link {
   padding: 2em 0em 0em 0em;
   width: 4.5rem;
@@ -1005,6 +1016,23 @@ padding-bottom: 0.5em;
     font-size: 18px;
   }
 
+  .navigation-link-black {
+    padding: 0.5em 0em 0em 0em;
+    width: 7.5rem;
+    font-size: 18px;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2;
+  }
+
+  .navigation-link-black:hover {
+    background: url(squiggle-highlight.svg);
+    z-index: 50;
+    background-repeat: repeat-x;
+    background-position-y: 2.3rem;
+    background-size: 0px 86px 5px 20px;
+  }
 
   .navigation-link {
     padding: 0.5em 0em 0em 0em;
@@ -1013,6 +1041,7 @@ padding-bottom: 0.5em;
     letter-spacing: 0.05rem;
     text-align: center;
     text-transform: uppercase;
+    line-height: 2;
   }
 
   .navigation-link:hover {
@@ -1190,6 +1219,7 @@ padding-bottom: 0.5em;
 
   .project-details {
     padding: 0em 70px 0em 70px;
+    line-height: 2;
   }
 
   .next-project-wrapper {
@@ -1217,6 +1247,7 @@ padding-bottom: 0.5em;
 
   .next-project-arrow {
     width: 3vw;
+    padding-bottom: 0.5em;
   }
 
   .about-introduction {
