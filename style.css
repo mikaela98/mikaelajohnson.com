@@ -62,7 +62,8 @@ h1 {
 h2 {
   font-family: var(--main-heading);
   font-weight: 900;
-  font-size: 45px;
+  font-size: 35px;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -384,7 +385,7 @@ p4 {
 
 .top-arrow {
   padding: 0em 0.5em 0em 0em;
-  width: 1.3em;
+  width: 1.1em;
 }
 
 .footertop {
@@ -563,14 +564,14 @@ display: none;
 
 .about-photo {
   width: 100%;
-  padding-top: 3.5rem;
+  padding-top: 5rem;
   margin-bottom: 2rem;
 }
 
 .about-bio {
   width: 100%;
   text-align: left;
-  line-height: 2.5em;
+  line-height: 2rem;
   color: var(--link-color);
 }
 
@@ -623,7 +624,7 @@ display: none;
 .project-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 5em 1em 1em 1em;
+  padding: 6em 1em 1em 1em;
 }
 
 .project-type{
@@ -960,7 +961,7 @@ padding-bottom: 0.5em;
 }
 
 .next-project-arrow {
-  width: 10vw;
+  width: 6vw;
 }
 
 
@@ -1222,6 +1223,10 @@ padding-bottom: 0.5em;
     line-height: 2;
   }
 
+  .details-description{
+    font-size: 24px;
+  }
+
   .next-project-wrapper {
     font-size: 18px;
     padding: 1em 70px 3em 70px;
@@ -1246,7 +1251,7 @@ padding-bottom: 0.5em;
   }
 
   .next-project-arrow {
-    width: 3vw;
+    width: 2vw;
     padding-bottom: 0.5em;
   }
 
