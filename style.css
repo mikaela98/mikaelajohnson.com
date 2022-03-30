@@ -21,8 +21,8 @@ html {
   --body-typeface: 'Lato', sans-serif;
   --main-heading: 'Neuton', serif;
   --background-color: #F5EFE7;
-  --body-text: #3D3C2B;
-  --project-headings: #3D3C2B;
+  --body-text: black;
+  --project-headings: black;
   --hover-color: #B98348;
   --footer-color: #B98348;
   --footer-text: #D6DCD5;
@@ -62,8 +62,7 @@ h1 {
 h2 {
   font-family: var(--main-heading);
   font-weight: 900;
-  font-size: 35px;
-  line-height: 1.2em;
+  font-size: 45px;
 }
 
 h3 {
@@ -76,6 +75,13 @@ h4 {
   font-family: var(--main-heading);
   font-weight: 900;
   color: var(--project-headings)
+}
+
+h5 {
+  font-family: var(--main-heading);
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 1.2em;
 }
 
 /* .hero-headline {
@@ -990,6 +996,11 @@ padding-bottom: 0.5em;
     font-size: 75px;
   }
 
+  h5 {
+    font-size: 65px;
+    line-height: 1.1em;
+  }
+
   p2 {
     font-family: var(--main-heading);
     font-size: 24px;
@@ -1189,7 +1200,7 @@ padding-bottom: 0.5em;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 5em;
-    padding: 10em 70px 5em 70px;
+    padding: 10.5em 70px 5em 70px;
   }
 
   .projecttitles{
